@@ -1,0 +1,10 @@
+{% extends 'cefetaxi/base.html' %}
+{% block content %}
+    <p>Bem vindo ao CefeTaxi, por favor faça seu login</p>
+    <form action="{% url 'index' %}" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Submit" />
+    </form>
+    <p>Ou crie sua aqui: <a href="{% url 'newuser' %}">Nova Conta</a></p>
+{% endblock %}

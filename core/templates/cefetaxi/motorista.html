@@ -1,0 +1,5 @@
+{% extends 'cefetaxi/base.html' %}
+{% block content %}
+<h2>Bem Vindo {{ motorista.django_user.first_name }}, essa e sua pagina de motorista</h2>
+<a href="{% url 'logout' %}">Logout</a>
+{% endblock %}
