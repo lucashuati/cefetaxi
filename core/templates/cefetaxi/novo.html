@@ -1,9 +1,0 @@
-{% extends 'cefetaxi/base.html' %}
-{% block content %}
-    <h2>Novo Usuario</h2>
-    <form action="{% url 'newuser' %}" method="post">
-        {% csrf_token %}
-        {{ form.as_ul }}
-        <input type="submit" value="Submit" />
-    </form>
-{% endblock %}
