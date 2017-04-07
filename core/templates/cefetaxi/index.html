@@ -1,0 +1,17 @@
+{% extends 'cefetaxi/base.html' %}
+{% block content %}
+<div class="login-page">
+  <div class="form">
+    <p>Bem vindo ao CefeTaxi, para entrar faça seu login</p>
+    {% if erro %}
+      <p class="message error ">Login ou senha incorretos</p>
+    {% endif %}
+    <form class="login-form" action="{% url 'index' %}" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input class="button" type="submit" value="Entrar" />
+    </form>
+    <p class="message">Ou crie sua <a href="{% url 'newuser' %}">Nova Conta</a></p>
+  </div>
+</div>
+{% endblock %}

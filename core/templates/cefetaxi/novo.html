@@ -1,0 +1,14 @@
+{% extends 'cefetaxi/base.html' %}
+{% block content %}
+<div class="login-page">
+  <div class="form">
+    <p>Novo Usuario</p>
+    <form class="login-form" action="{% url 'newuser' %}" method="post">
+      {% csrf_token %}
+      {{ form }}
+      <input class="button" type="submit" value="Cadastrar" />
+    </form>
+  </div>
+</div>
+
+{% endblock %}
